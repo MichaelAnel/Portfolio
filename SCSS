@@ -1,3 +1,7 @@
+$bar-width: 100%;
+$bar-height: 3px;
+$bar-spacing: 10px;
+
 body {
     background-color: #313b3f;
     margin: 0;
@@ -23,36 +27,38 @@ body {
   
   #toggle-nav-menu {
     border: none;
-    font-size: 2rem;
+    background: none;
     margin: .5rem 1.5rem;
-    background-color: white;
     border-radius: 100%;
     width: 3.125rem;
     height: 3.125rem;
+    cursor: pointer;
   }
 
   .hamburger {
-    $width:25px;
-    $height:3px;
-    width:$width;
-    height:$height;
-    background:black;
-    display:block;
+    width: $bar-width;
+    height: $bar-height;
+    background: rgb(255, 255, 255);
+    display: block;
+  }
+  
+  .hamburger-1 {
+    -webkit-transform: translate3d(0, -6px, 0);
+            transform: translate3d(0, -6px, 0);
+  }
+  
+  .hamburger-2 {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  
+  .hamburger-3 {
+    -webkit-transform: translate3d(0, 6px, 0);
+            transform: translate3d(0, 6px, 0);
   }
 
-  $hamburger-spacing:6px;
-    .hamburger-1{
-    transform:translate3d(0,-$hamburger-spacing,0);
-    }
-    .hamburger-2{
-    transform:translate3d(0,0,0);
-    }
-    .hamburger-3{
-    transform:translate3d(0,$hamburger-spacing,0);
-    }
-  
   h1, li, .nav-link {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     color: white;
     list-style: none;
@@ -60,15 +66,10 @@ body {
   }
   
   h1 {
-    font-size: 1.5em;
+    font-size: 1.25em;
     padding: .25em 0 .25em .5em;
     margin: auto;
     flex-grow: 1;
-  }
-  
-  a:hover {
-    background-color: #ffffff;
-    color: #13a3f7;
   }
   
     #nav-id {
