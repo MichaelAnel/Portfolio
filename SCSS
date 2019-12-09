@@ -1,6 +1,7 @@
 $bar-width: 100%;
 $bar-height: 3px;
 $bar-spacing: 10px;
+$skill-color: #1A1F21;
 
 body {
     background-color: #313b3f;
@@ -38,6 +39,7 @@ body {
   .hamburger {
     width: $bar-width;
     height: $bar-height;
+    border-radius: 2px;
     background: rgb(255, 255, 255);
     display: block;
   }
@@ -72,15 +74,36 @@ body {
     flex-grow: 1;
   }
   
-    #nav-id {
-      margin: 0;
-      padding-left: 0;
-      text-align: center;
-      display: none;
+  #nav-id {
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+    display: none;
     }
-  
+
   .skills {
-    margin: 50px 0 0 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 90%;
+    grid-template-rows: 15rem 10rem;
+    grid-row-gap: 10%;
+    }
+
+  .profile-image {
+    background-color: $skill-color;
+    justify-self: center;
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .exp-bar {
+    width: 100%;
+    margin-bottom: 2%;
+    color: black;
+    background-color: $skill-color;
+    border-radius: 4px;
   }
   
   
