@@ -1,5 +1,12 @@
-const menuButton = document.querySelector('#nav-id');
+const nav = document.querySelector('.header-menu');
+const menuButton = document.querySelector('#toggle-nav-menu');
 
-menuButton.addEventListener('click') {
-
+window.onscroll = function() {
+  windowScroll();
 };
+
+function windowScroll() {
+  nav.classList.toggle("scroll-color", document.documentElement.scrollTop > 50);
+}
+
+menuButton.addEventListener("click", )
