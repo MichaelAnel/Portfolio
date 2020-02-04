@@ -44,7 +44,7 @@ body {
   #toggle-nav-menu {
     border: none;
     background: none;
-    margin: .5rem 1.5rem;
+    margin: .2rem 1.5rem;
     border-radius: 100%;
     width: 3.125rem;
     height: 3.125rem;
@@ -107,11 +107,19 @@ body {
     width: 15rem;
   }
 
+  .experiences {
+    display: flex;
+    flex-direction: column;
+  }
+
   .exp-bar {
+    align-self: center;
     box-sizing: border-box;
-    padding-left: .5rem;
+    padding: .3rem 0 0 .5rem;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-    width: 100%;
+    height: 30px;
+    width: 80%;
     margin-bottom: 2%;
     color: #FFFFFF;
     background-color: $drk-color;
@@ -127,9 +135,10 @@ body {
   @media (min-width: 48rem) {
   
   .main-header, nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    position: fixed;
+    box-sizing: border-box;
+    font-size: 22px;
+    margin: 0;
   }
   
   
@@ -140,4 +149,11 @@ body {
   #nav-id {
     display: flex;
   }
+
+  .header-menu {
+    display: flex;
+    flex-direction: row;
+    transition: .2s ease-in;
+  }
+  
   }
