@@ -2,6 +2,7 @@ $bar-width: 100%;
 $bar-height: 3px;
 $bar-spacing: 10px;
 $drk-color: #1A1F21;
+$blu-color: #0584c4;
 $white: #FFFFFF ;
 
 //--------------BASE--------------//
@@ -22,7 +23,14 @@ body {
     margin: auto;
     flex-grow: 1;
   }
-  
+
+  h2 {
+    margin: 0 auto;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: $white;
+  }
+
   .main-header, nav {
     position: fixed;
     box-sizing: border-box;
@@ -31,7 +39,7 @@ body {
   }
 
   .scroll-color {
-    background-color: #0584c4;
+    background-color: $blu-color;
     box-shadow: 0 .25rem 0 0 #191c2240;
   }
   
@@ -44,7 +52,7 @@ body {
   #toggle-nav-menu {
     border: none;
     background: none;
-    margin: .2rem 1.5rem;
+    margin: .5rem 1.5rem;
     border-radius: 100%;
     width: 3.125rem;
     height: 3.125rem;
@@ -74,7 +82,7 @@ body {
             transform: translate3d(0, 6px, 0);
   }
 
-  h1, li, .nav-link {
+  h1, h2, li, .nav-link {
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     color: $white;
@@ -94,8 +102,8 @@ body {
     margin-bottom: 5%;
     display: grid;
     justify-content: center;
-    grid-template-columns: 90%;
-    grid-template-rows: 15rem 10rem;
+    grid-template-columns: 70vw;
+    grid-template-rows: 15rem 20rem;
     grid-row-gap: 10%;
     }
 
@@ -110,20 +118,38 @@ body {
   .experiences {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
-  .exp-bar {
-    align-self: center;
-    box-sizing: border-box;
-    padding: .3rem 0 0 .5rem;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    height: 30px;
-    width: 80%;
-    margin-bottom: 2%;
-    color: #FFFFFF;
+  .exp-title {
+    align-self: flex-start;
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .exp-container {
+    width: 70vw;
+  }
+
+  .exp {
+    width: 100%;
+    text-align: right;
+    border-radius: 10px;
     background-color: $drk-color;
-    border-radius: 4px;
+  }
+
+  .html {
+    width: 90%;
+    background-color: $blu-color;
+    border-radius: 10px;
+  }
+
+  .prog-bar {
+    margin-bottom:1vh;
+  }
+
+  .about-me {
+    position: static;
   }
 
   .about-title {
@@ -135,10 +161,9 @@ body {
   @media (min-width: 48rem) {
   
   .main-header, nav {
-    position: fixed;
-    box-sizing: border-box;
-    font-size: 22px;
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   
   
@@ -149,11 +174,4 @@ body {
   #nav-id {
     display: flex;
   }
-
-  .header-menu {
-    display: flex;
-    flex-direction: row;
-    transition: .2s ease-in;
-  }
-  
-  }
+}
