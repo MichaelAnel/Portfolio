@@ -1,5 +1,6 @@
 const nav = document.querySelector('.header-menu');
 const menuButton = document.querySelector('#toggle-nav-menu');
+const exp = document.querySelector('.exp-container');
 
 window.onscroll = function() {
   windowScroll();
