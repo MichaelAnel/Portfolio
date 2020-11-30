@@ -4,6 +4,7 @@ $bar-spacing: 10px;
 $drk-color: #1A1F21;
 $blu-color: #0584c4;
 $white: #FFFFFF ;
+$fade-in: fadeIn ease 4s; 
 
 //--------------BASE--------------//
 
@@ -53,7 +54,6 @@ body {
     border: none;
     background: none;
     margin: .5rem 1.5rem;
-    border-radius: 100%;
     width: 3.125rem;
     height: 3.125rem;
     cursor: pointer;
@@ -63,23 +63,26 @@ body {
     width: $bar-width;
     height: $bar-height;
     border-radius: 2px;
-    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    transition: .5s;
+  }
+
+  .hamburger::before, .hamburger::after {
+    content: '';
+    position: relative;
     display: block;
+    width: $bar-width;
+    height: $bar-height;
+    border-radius: 2px;
+    background: rgb(255, 255, 255);
   }
-  
-  .hamburger-1 {
-    -webkit-transform: translate3d(0, -6px, 0);
-            transform: translate3d(0, -6px, 0);
+
+  .hamburger::before {
+    transform: translateY(-12px);
   }
-  
-  .hamburger-2 {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  
-  .hamburger-3 {
-    -webkit-transform: translate3d(0, 6px, 0);
-            transform: translate3d(0, 6px, 0);
+
+  .hamburger::after {
+    transform: translateY(9px);
   }
 
   h1, h2, li, .nav-link {
@@ -129,6 +132,22 @@ body {
 
   .exp-container {
     width: 70vw;
+    animation: $fade-in;
+    -webkit-animation: $fade-in;
+    -moz-animation: $fade-in;
+    -o-animation: $fade-in;
+    -ms-animation: $fade-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -10%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   .exp {
