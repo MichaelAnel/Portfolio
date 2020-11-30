@@ -1,196 +1,104 @@
-$bar-width: 100%;
-$bar-height: 3px;
-$bar-spacing: 10px;
-$drk-color: #1A1F21;
-$blu-color: #0584c4;
-$white: #FFFFFF ;
-$fade-in: fadeIn ease 4s; 
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Michael Anel | Front End Web Developer</title>
+    <link rel="stylesheet" href="../scss/michaelanel.css">
+    <link rel="stylesheet-framework" href="../style/loading-bar.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+  </head>
 
-//--------------BASE--------------//
+<body>
+  <header class="main-header">
+    <div class="header-menu">
+      <h1 class="title-name">Michael Anel</h1>
+      
+      <button name="menu" id="toggle-nav-menu" href="#">
+        <div class="hamburger"></div>
+      </button>
 
-body {
-    background-color: #313b3f;
-    margin: 0;
-  }
+    </div>
+
+      <div class="left-menu-bar">
+        <nav>
+          <ul id="nav-id">
+            <li><a class="nav-link" href="#">home</a></li>
+            <li><a class="nav-link" href="#">about</a></li>
+            <li><a class="nav-link" href="#">portfolio</a></li>
+            <li><a class="nav-link" href="#">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+  </header>
+
+    <div class="skills" alt="skills">
+        <div class="profile-image">
+          <img src="" class="me">
+        </div>
   
-  header {
-    width: 100%;
-  }
+        <div class="exp-container">
+        
+          <h2>HTML</h2>
+            <div class="exp">
+              <div class="html prog-bar">90%</div>
+            </div>
+          
+            <h2>CSS</h2>
+            <div class="exp">
+              <div class="html prog-bar">80%</div>
+            </div>
 
-  h1 {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    padding: .25em 0 .25em .5em;
-    margin: auto;
-    flex-grow: 1;
-  }
+            <h2>JAVASCRIPT</h2>
+            <div class="exp">
+              <div class="html prog-bar">90%</div>
+            </div>
 
-  h2 {
-    margin: 0 auto;
-    font-size: 20px;
-    letter-spacing: 2px;
-    color: $white;
-  }
+        </div>
+    </div>
 
-  .main-header, nav {
-    position: fixed;
-    box-sizing: border-box;
-    font-size: 22px;
-    margin: 0;
-  }
+    <div class="about-me" alt="me">
+      <h1 class="about-title">About Me</h1>
+      <p>I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include I'm a front-end/ graphic artist based in Los Angeles, California.
+        My interests include
+      </p>
+    </div>
 
-  .scroll-color {
-    background-color: $blu-color;
-    box-shadow: 0 .25rem 0 0 #191c2240;
-  }
-  
-  .header-menu {
-    display: flex;
-    flex-direction: row;
-    transition: .2s ease-in;
-  }
-  
-  #toggle-nav-menu {
-    border: none;
-    background: none;
-    margin: .5rem 1.5rem;
-    width: 3.125rem;
-    height: 3.125rem;
-    cursor: pointer;
-  }
+    <div>
+      <h1 class="about-title">Projects</h1>
 
-  .hamburger {
-    width: $bar-width;
-    height: $bar-height;
-    border-radius: 2px;
-    background-color: rgb(255, 255, 255);
-    transition: .5s;
-  }
+      <div class="project-one"></div>
+    </div>
 
-  .hamburger::before, .hamburger::after {
-    content: '';
-    position: relative;
-    display: block;
-    width: $bar-width;
-    height: $bar-height;
-    border-radius: 2px;
-    background: rgb(255, 255, 255);
-  }
+    <div>
+      <h1 class="about-title">Skills</h1>
+        <div class="skill-icons">
+          <img>
 
-  .hamburger::before {
-    transform: translateY(-12px);
-  }
-
-  .hamburger::after {
-    transform: translateY(9px);
-  }
-
-  h1, h2, li, .nav-link {
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    color: $white;
-    list-style: none;
-    margin: auto;
-  }
-  
-  #nav-id {
-    margin: 0;
-    padding-left: 0;
-    text-align: center;
-    display: none;
-    }
-
-  .skills {
-    padding-top: 20%;
-    margin-bottom: 5%;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 70vw;
-    grid-template-rows: 15rem 20rem;
-    grid-row-gap: 10%;
-    }
-
-  .profile-image {
-    background-color: $drk-color;
-    border-radius: 6px;
-    justify-self: center;
-    height: 15rem;
-    width: 15rem;
-  }
-
-  .experiences {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .exp-title {
-    align-self: flex-start;
-    margin: 0;
-    font-size: 18px;
-  }
-
-  .exp-container {
-    width: 70vw;
-    animation: $fade-in;
-    -webkit-animation: $fade-in;
-    -moz-animation: $fade-in;
-    -o-animation: $fade-in;
-    -ms-animation: $fade-in;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translate3d(0, -10%, 0);
-    }
-    to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .exp {
-    width: 100%;
-    text-align: right;
-    border-radius: 10px;
-    background-color: $drk-color;
-  }
-
-  .html {
-    width: 90%;
-    background-color: $blu-color;
-    border-radius: 10px;
-  }
-
-  .prog-bar {
-    margin-bottom:1vh;
-  }
-
-  .about-me {
-    position: static;
-  }
-
-  .about-title {
-    text-align: center;
-  }
-  
-  
-  
-  @media (min-width: 48rem) {
-  
-  .main-header, nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  
-  #toggle-nav-menu {
-    display: none;
-  }
-  
-  #nav-id {
-    display: flex;
-  }
-}
+        </div>
+    </div>
+</body>
+  <script src="../js/michaelanel.js"></script>
+  <script src="../js/loading-bar.js"></script>
